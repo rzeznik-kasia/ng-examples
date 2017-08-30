@@ -13,4 +13,5 @@ export class AppComponent {
   myName = 'Kasia';
   /*some changesfdd*/
   today: number = Date.now();
+  sum: number[] = [1, 4, 7];
 }
