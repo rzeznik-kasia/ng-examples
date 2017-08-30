@@ -1,0 +1,35 @@
+https://debugger.pl/
+
+npm init -powstaje-> package.json
+
+npm i bootstrap --save[to co sciagam sciagnie sie i zapisze do package json] [bootstrap jest biblioteka cssow]
+[przeciagajac z node modules do index.html]
+
+npm i [wszystkie zaleznosci sie sciagaja]
+
+..wersje
+ ~
+2.2.3 [ostatnia cyferka-hotfixy, druga -nic nie zepsuja dodaja featechery, pierwsza cyferka - breaking changes ]
+jak jest ^ to sciagaj od 2.2.3 az do 2.9.x
+~pozwala podbijac wersje hotfixa, ostatniej cyfry
+npm i nie zobaczysz ze uaktualnilo sie tylko raczej po npm update.
+
+..
+ng new ng-examples
+
+npm install -g @angular/cli
+ng new PROJECT-NAME
+
+
+..
+file setting -> safe write [odznaczycc]
+..
+instancje tworzymy w javie przez new, a w anuglarze poprzez znacznik. np app-root
+..
+npm install materialize-css --save //biblioteka meatializowa
+http://materializecss.com/getting-started.html
+..
+emed.io
+
+
+

@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
+
+/*dekorator, bajery do klasy*/
+import {Component} from "@angular/core";
+
+@Component({ /*alt+enter zeby sie doimportowalo*/
+  selector: 'app-root', /*instancje tworzymy w javie przez new, a w anuglarze poprzez znacznik. np app-root*/
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'app';
+  myName = 'Kasia';
+  today: number = Date.now();
 }
