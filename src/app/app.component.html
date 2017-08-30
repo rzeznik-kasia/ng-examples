@@ -5,16 +5,20 @@
     <h3>Directives</h3>
 
     <ul>
-      <li [ngClass]="{teal: o}"
+      <li [ngClass]="{teal: o, green: !o}"
           *ngFor="let item of items; let idx=index; let o = odd">
         {{idx+1}} {{item.name}} {{o}}
-      </li>
+
+        <!--dyrektywa wejscia [ wplywa na atrybuty, ustawia lub tworzy atrybut np atrybut class tak jakbysmy napisali class= cos tam-->
+        <!-- dyrektywa * wplywa na wyswietlenei calego taga np. li-->
+
+      </li><!--angular opakowuje kawalek kodu w templaty dzieki tym gwiazdkom-->
     </ul>
 
 
     <input type="text"
-           #myInput
-           (input)="myName = myInput.value"
+           #myInput <!--nie dyrektywa, mozna sie do tego odwolywac w templatce , albo na zewnatrz tylko o tym pozniej-->
+           (input)="myName = myInput.value" <!--zdarzenie, chcemy powiadomic parenta o zdarzeniu-->
            [value]="myName"> {{myName}}
     <br> <!--   two way data binding jest w dwoch etapach(input)->na kazdym znaku zeby cos sie stalo-->
 
