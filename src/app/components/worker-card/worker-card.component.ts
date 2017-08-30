@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class WorkerCardComponent implements OnInit {
 
-  @Input() model;/*interfejs wejscia dla komponentu, jesli nic nie przekaze bedzie kasia jak przekaze to bedzie przekazane*/
+  @Input() model; /*interfejs wejscia dla komponentu, jesli nic nie przekaze bedzie kasia jak przekaze to bedzie przekazane*/
 
   constructor() { }
 
