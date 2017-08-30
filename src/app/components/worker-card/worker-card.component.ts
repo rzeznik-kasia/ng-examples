@@ -1,13 +1,16 @@
 import {
   AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges,
-  ViewChild
+  ViewChild, ViewEncapsulation
 } from '@angular/core';
 
 
 @Component({
   selector: 'app-worker-card',
   templateUrl: './worker-card.component.html',
-  styleUrls: ['./worker-card.component.css']
+  styleUrls: ['./worker-card.component.css'],
+  encapsulation: ViewEncapsulation.Emulated /*mozna wykomentowac bo jest domyslny, polaczne z _ngcontent-c1, czyli style na zewnatrz*/
+  //encapsulation: ViewEncapsulation.None /*dedykowany do mniejszych rzeczy a nie do malych komponencikow*/
+  /*encapsulation: ViewEncapsulation.Native /!*tylko style wewnetrzen oddrzialywuja*!/*/
 })
 export class WorkerCardComponent implements OnInit, OnChanges, AfterViewInit {
 
