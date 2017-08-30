@@ -5,8 +5,8 @@
     <h3>Directives</h3>
 
     <input type="text"
-           (input)="myName = $event.target.value"
-
+           #myInput
+           (input)="myName = myInput.value"
            [value]="myName"> {{myName}}
     <br> <!--   two way data binding jest w dwoch etapach(input)->na kazdym znaku zeby cos sie stalo-->
 
