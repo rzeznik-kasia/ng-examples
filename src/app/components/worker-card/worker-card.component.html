@@ -1,5 +1,10 @@
-<div>
+<div class="card-panel">
+  <div>{{callToPhone}}</div>
 
-  name: {{model.name}}
-
+  <div class="red">
+    <ng-content></ng-content>
+  </div>
+  <hr>
+  name: {{model.name}} <!--wprowadzilismy dane do komponentu-->
+  <button class="btn" (click)="showPhone(model.phone)">Show phone</button>
 </div>
