@@ -36,4 +36,6 @@ autoscorll from souce w trybiku w project structures
 mamy error w konsoli: XMLHttpRequest cannot load https://emitter.pl/api/workers. The 'Access-Control-Allow-Origin' header has a value 'http://localhost:8000' that is not equal to the supplied origin. Origin 'http://localhost:4200' is therefore not allowed access.
 -> trzeba serwer ustwaic na odpowiedni port
 
+..
+debugger;
 

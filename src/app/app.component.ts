@@ -24,14 +24,24 @@ export class AppComponent {
     {name: "Ola", phone: 123433},
     {name: "Kasia", phone: 122234},
   ];
+  workers: any[]; /* mozna {}[], mozna {name, phone}, mozna tez tak: Object[], albo jakis interfejs uzyc albo klasy*/
 
   /*dependency injecion*/
-  constructor(private http: Http) { /*var http = new Http -> daje nam mozliwosc zeby podmienic to w locie*/
+  constructor(private http: Http) { /*var http = new Http -> daje nam mozliwosc zeby podmienic to w locie*/ /*wstrzyknelismy serwis do pobierania danych*/
     this.http.get('https://emitter.pl/api/workers')  /*endpoint definiujemy*/ /* to jest rodzaj promisa, musimy sie do tego zasubscybowac*/
-      .subscribe((resp)=>{
-        console.log(resp);
+      .subscribe((resp)=>{ /*tu jest callback*/
+        this.workers = resp.json().data; /* w lambdzie this oznacza klasa w ktorej jestes, a w funkcji (patrz ponizej), this oznacza np. window i trzeba bylo bindowac albo jakie selfy robic*/
       }) /*lambda function*/
     /*ctrp p  [bedac w nawiasie]-> co metoda od nas chce, albo z ctrl geta wciskamy -> w deklaracji klasy*/
+
+    /*
+    uwaga alternatywa!
+    .subscribe(function() {
+          this.workers = resp.json().data;  <- tu nie mozna uzyc this tak prosto
+        }
+      })*/
+
+
   }
 
   showAlert() {

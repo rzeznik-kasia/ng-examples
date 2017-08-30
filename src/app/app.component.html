@@ -2,6 +2,11 @@
 
   <div class="card-panel blue">
     <h3>Services</h3>
+workers: {{workers | json}}
+    <ul>
+      <li *ngFor="let worker of workers">{{worker.name}} {{worker.phone}}</li>
+    </ul>
+
   </div>
 
 
