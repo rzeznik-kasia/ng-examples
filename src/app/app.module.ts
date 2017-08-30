@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {SumPipe} from "./pipes/sum.pipe";
 import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {FormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

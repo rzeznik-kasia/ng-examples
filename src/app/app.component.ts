@@ -26,8 +26,12 @@ export class AppComponent {
   ];
 
   /*dependency injecion*/
-  constructor(private http:Http) {
-
+  constructor(private http: Http) { /*var http = new Http -> daje nam mozliwosc zeby podmienic to w locie*/
+    this.http.get('https://emitter.pl/api/workers')  /*endpoint definiujemy*/ /* to jest rodzaj promisa, musimy sie do tego zasubscybowac*/
+      .subscribe((resp)=>{
+        console.log(resp);
+      }) /*lambda function*/
+    /*ctrp p  [bedac w nawiasie]-> co metoda od nas chce, albo z ctrl geta wciskamy -> w deklaracji klasy*/
   }
 
   showAlert() {
