@@ -1,5 +1,13 @@
 <div class="contailer">
 
+  <div class="card-panel yellow">
+    <h3>Compmonents</h3>
+    <app-worker-card *ngFor="let worker of workers"></app-worker-card>
+
+  </div>
+
+
+
   <div class="card-panel blue">
     <h3>Services</h3>
 workers: {{workers | json}}
