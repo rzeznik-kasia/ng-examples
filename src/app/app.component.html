@@ -10,7 +10,7 @@ workers: {{workers | json}}
   </div>
 
 
-  <div class="card-panel orange lighten-3">  <!--.card-panel.orange-->
+  <div class="card-panel orange lighten-3">
 
 
 
@@ -22,37 +22,27 @@ workers: {{workers | json}}
           *ngFor="let item of items; let idx=index; let o = odd">
         {{idx+1}} {{item.name}} {{o}}
 
-        <!--dyrektywa wejscia [ wplywa na atrybuty, ustawia lub tworzy atrybut np atrybut class tak jakbysmy napisali class= cos tam-->
-        <!-- dyrektywa * wplywa na wyswietlenei calego taga np. li-->
 
-      </li><!--angular opakowuje kawalek kodu w templaty dzieki tym gwiazdkom-->
+      </li>
     </ul>
 
 
-    <button (click)="showAlert()"> show alert </button> <!--musi byc zdefiniowana w app.component.ts-->
+    <button (click)="showAlert()"> show alert </button>
 
 
     <input type="text"
            #myInput
            (input)="myName = myInput.value"
            [value]="myName"> {{myName}}
-    <!--#myInput nie dyrektywa, mozna sie do tego odwolywac w templatce , albo na zewnatrz tylko o tym pozniej-->
-    <!--(input) zdarzenie, chcemy powiadomic parenta o zdarzeniu-->
-    <br> <!--   two way data binding jest w dwoch etapach(input)->na kazdym znaku zeby cos sie stalo-->
+    <br>
 
     <input type="checkbox"
            id="toggle"
-           [(ngModel)]="access"> <!--uwaga na uzywanie dla np 1000 elementwo, moze byc spade wydajnosci--> <!--banan w pudełku, [wejscie (wyjscie -->
-
-    <!--
-    zamiast 2waydata binding mozna tak:
-    (change)="access = $event.target.checekd"
-    [checked]="access"
-    -->
+           [(ngModel)]="access">
 
     <label for="toggle">toggle access</label>
     {{access}}
-    <div *ngIf="access"> <!--w angularze 1 trzeba bylo "{{access}}" a w 2 i 4 interpolacja tylko do wyswietlenia wartosci miedzy znacznikami -->
+    <div *ngIf="access">
       you have access
     </div>
   </div>
@@ -60,14 +50,14 @@ workers: {{workers | json}}
 
   <div class="card-panel teal lighten-3">
     <h3>Pipe and interpolate</h3>
-    {{myName | uppercase}} <!--pipy to funkcje na wartosci np. myname-->
+    {{myName | uppercase}}
     <br>
     {{today / 1000/ 60 / 60 / 24 / 365 + 1970 }}
     <br>
     {{myName === "Kasia" ? 'Ja' : "Ktos"}}
     <br>
-    {{today | date:"dd/MMM/yyyy * H:m:s" | uppercase}} <!--po dwukropku formater dajemy--> <!--ctrl+spacja to podpowiadanie-->
+    {{today | date:"dd/MMM/yyyy * H:m:s" | uppercase}}
     <br>
-    {{sum | sum}} <!--refaktor jesli dotyczy i klas i htmla to jest to ryzykowne, lepiej tego nie robic-->
+    {{sum | sum}}
   </div>
 </div>

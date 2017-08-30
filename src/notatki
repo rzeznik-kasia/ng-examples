@@ -39,3 +39,6 @@ mamy error w konsoli: XMLHttpRequest cannot load https://emitter.pl/api/workers.
 ..
 debugger;
 
+..
+ng g s services/workers
+
