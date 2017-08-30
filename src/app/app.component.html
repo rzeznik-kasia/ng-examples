@@ -5,7 +5,7 @@
     <h3>Directives</h3>
     <input type="checkbox"
            id="toggle"
-           (ngModel)="access"> <!--uwaga na uzywanie dla np 1000 elementwo, moze byc spade wydajnosci--> <!--banan w pudełku, [wejscie (wyjscie -->
+           [(ngModel)]="access"> <!--uwaga na uzywanie dla np 1000 elementwo, moze byc spade wydajnosci--> <!--banan w pudełku, [wejscie (wyjscie -->
     <label for="toggle">toggle access</label>
     {{access}}
     <div *ngIf="access"> <!--w angularze 1 trzeba bylo "{{access}}" a w 2 i 4 interpolacja tylko do wyswietlenia wartosci miedzy znacznikami -->
