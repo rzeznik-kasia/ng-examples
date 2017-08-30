@@ -2,7 +2,8 @@
 
   <div class="card-panel yellow">
     <h3>Compmonents</h3>
-    <app-worker-card *ngFor="let worker of workers"></app-worker-card>
+    <app-worker-card [name]="worker.name"
+      *ngFor="let worker of workers"></app-worker-card>
 
   </div>
 
