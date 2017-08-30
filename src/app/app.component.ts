@@ -23,4 +23,8 @@ export class AppComponent {
     {name: "Ola", phone: 123433},
     {name: "Kasia", phone: 122234},
   ];
+
+  showAlert() {
+    alert('hi');
+  }
 }

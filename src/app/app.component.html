@@ -16,15 +16,27 @@
     </ul>
 
 
+    <button (click)="showAlert()"> show alert </button> <!--musi byc zdefiniowana w app.component.ts-->
+
+
     <input type="text"
-           #myInput <!--nie dyrektywa, mozna sie do tego odwolywac w templatce , albo na zewnatrz tylko o tym pozniej-->
-           (input)="myName = myInput.value" <!--zdarzenie, chcemy powiadomic parenta o zdarzeniu-->
+           #myInput
+           (input)="myName = myInput.value"
            [value]="myName"> {{myName}}
+    <!--#myInput nie dyrektywa, mozna sie do tego odwolywac w templatce , albo na zewnatrz tylko o tym pozniej-->
+    <!--(input) zdarzenie, chcemy powiadomic parenta o zdarzeniu-->
     <br> <!--   two way data binding jest w dwoch etapach(input)->na kazdym znaku zeby cos sie stalo-->
 
     <input type="checkbox"
            id="toggle"
            [(ngModel)]="access"> <!--uwaga na uzywanie dla np 1000 elementwo, moze byc spade wydajnosci--> <!--banan w pudełku, [wejscie (wyjscie -->
+
+    <!--
+    zamiast 2waydata binding mozna tak:
+    (change)="access = $event.target.checekd"
+    [checked]="access"
+    -->
+
     <label for="toggle">toggle access</label>
     {{access}}
     <div *ngIf="access"> <!--w angularze 1 trzeba bylo "{{access}}" a w 2 i 4 interpolacja tylko do wyswietlenia wartosci miedzy znacznikami -->
