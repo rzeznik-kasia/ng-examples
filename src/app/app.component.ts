@@ -38,4 +38,8 @@ export class AppComponent {
   showAlert() {
     alert('hi');
   };
+
+  aaa($event) {
+    this.calling = $event;
+  }
 }

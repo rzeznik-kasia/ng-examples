@@ -7,8 +7,11 @@
       {{calling}}
     </div>
 
+    <!--<app-worker-card [model]="worker"-->
+                     <!--(callEvent)="calling = $event"-->
+                     <!--*ngFor="let worker of workers; let idx=index">-->
     <app-worker-card [model]="worker"
-                     (callEvent)="calling = $event"
+                     (callEvent)="aaa($event)"
                      *ngFor="let worker of workers; let idx=index">
       <h1>{{idx}}</h1>
     </app-worker-card>
