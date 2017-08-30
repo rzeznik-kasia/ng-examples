@@ -42,3 +42,4 @@ debugger;
 ..
 ng g s services/workers
 
+..ctrl alt s / albo ustawienia i wyszukujemy: live template

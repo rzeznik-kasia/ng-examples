@@ -26,8 +26,8 @@ export class AppComponent {
   constructor(private workerService: WorkersService) {
     workerService
       .getWorkersFromServer()
-      .subscribe((resp) => {
-        this.workers = resp.json().data;
+      .subscribe((data) => {
+        this.workers = data;
       });
   }
 
