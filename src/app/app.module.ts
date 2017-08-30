@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import {SumPipe} from "./pipes/sum.pipe";
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
-import {WorkersService} from "./services/workers.service";
 import { WorkerCardComponent } from './components/worker-card/worker-card.component';
 
 @NgModule({

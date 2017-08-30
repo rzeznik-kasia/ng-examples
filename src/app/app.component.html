@@ -10,7 +10,8 @@
     <app-worker-card [model]="worker"
                      (callEvent)="calling = $event"
                      *ngFor="let worker of workers; let idx=index">
-
+    <!--na kopponencie mozemy uruchomic zdarzenie -->
+      <!--(callEvent)="aaa($event) mozna by np tak to jeszcze zrobic"-->
       <h1>{{idx}}</h1>
     </app-worker-card>
 
