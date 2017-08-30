@@ -1,13 +1,11 @@
 <div class="card-panel">
   <div>{{callToPhone}}</div>
-<!--jesli chemy zebby tylko jeden tel sie na raz wyswietla to to uzywamy: singleton albo emmiter z flaga - z komponentu do parenta wypychamy zdarzenie wydarzenie-->
   <div class="red">
     <ng-content></ng-content>
   </div>
   <hr>
-  name: {{model.name}} <!--wprowadzilismy dane do komponentu-->
+  name: {{model.name}}
   <button class="btn"
           #btn
           (click)="showPhone(model.phone)">Show phone</button>
-  <!--do buttona z poziomu klasy mozna sie odwolac-->
 </div>
