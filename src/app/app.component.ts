@@ -32,14 +32,19 @@ export class AppComponent {
       .subscribe((resp)=>{ /*tu jest callback*/
         this.workers = resp.json().data; /* w lambdzie this oznacza klasa w ktorej jestes, a w funkcji (patrz ponizej), this oznacza np. window i trzeba bylo bindowac albo jakie selfy robic*/
       }) /*lambda function*/
-    /*ctrp p  [bedac w nawiasie]-> co metoda od nas chce, albo z ctrl geta wciskamy -> w deklaracji klasy*/
 
-    /*
-    uwaga alternatywa!
+    /*ctrp p  [bedac w nawiasie]-> co metoda od nas chce, albo z ctrl geta wciskamy -> w deklaracji klasy*/
+    /*uwaga alternatywa!
     .subscribe(function() {
           this.workers = resp.json().data;  <- tu nie mozna uzyc this tak prosto
         }
       })*/
+
+    setTimeout(() => {
+      console.log(0);
+    }, 0) /*wrzucanie do event loopa dlatego 0 pozniej sie wydrukuje niz 1*/
+    console.log(1); /*najpierw to wszytko sie musi wykonac i wszystko do konca co po console.logu a potem event loop sie opdapa.*/
+
 
 
   }
