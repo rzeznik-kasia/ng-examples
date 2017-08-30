@@ -11,5 +11,6 @@ import {Component} from "@angular/core";
 
 export class AppComponent {
   myName = 'Kasia';
+  /*some changes*/
   today: number = Date.now();
 }
