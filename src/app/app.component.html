@@ -29,10 +29,12 @@
   </div>
 
 
-  <div class="card-panel" [appSetColor]="'red'"> <!--trzeba dolozyc imput-->
+  <div class="card-panel" [appSetColor]="bgColor"> <!--trzeba dolozyc imput-->
 
 
     <h3>Directives</h3>
+
+    <input type="color" [(ngModel)] = "bgColor">
 
     <ul>
       <li [ngClass]="{teal: o, green: !o}"

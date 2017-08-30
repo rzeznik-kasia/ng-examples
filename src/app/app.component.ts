@@ -11,6 +11,7 @@ import {WorkersService} from "./services/workers.service";
 })
 
 export class AppComponent {
+  bgColor = "#ff0000";
   calling = '...';
   myName = 'Kasia';
   today: number = Date.now();
