@@ -11,6 +11,7 @@ import {WorkersService} from "./services/workers.service";
 })
 
 export class AppComponent {
+  calling = '...';
   myName = 'Kasia';
   today: number = Date.now();
   sum: number[] = [1, 4, 7];

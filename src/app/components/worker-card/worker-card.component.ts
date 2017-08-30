@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-worker-card',
@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class WorkerCardComponent implements OnInit {
 
   @Input() model;
+  @Output() callEvent: EventEmitter<any> = new EventEmitter;
 
   callToPhone;
   constructor() { }
@@ -17,5 +18,6 @@ export class WorkerCardComponent implements OnInit {
 
   showPhone(phone: Number | String) {
     this.callToPhone = phone;
+    this.callEvent.emit(phone);
   }
 }

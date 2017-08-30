@@ -2,8 +2,14 @@
 
   <div class="card-panel yellow">
     <h3>Compmonents</h3>
+
+    <div class="card-panel pink white-text">
+      {{calling}}
+    </div>
+
     <app-worker-card [model]="worker"
-      *ngFor="let worker of workers; let idx=index">
+                     (callEvent)="calling = $event"
+                     *ngFor="let worker of workers; let idx=index">
 
       <h1>{{idx}}</h1>
     </app-worker-card>
@@ -11,10 +17,9 @@
   </div>
 
 
-
   <div class="card-panel blue">
     <h3>Services</h3>
-workers: {{workers | json}}
+    workers: {{workers | json}}
     <ul>
       <li *ngFor="let worker of workers">{{worker.name}} {{worker.phone}}</li>
     </ul>
@@ -23,8 +28,6 @@ workers: {{workers | json}}
 
 
   <div class="card-panel orange lighten-3">
-
-
 
 
     <h3>Directives</h3>
@@ -39,7 +42,7 @@ workers: {{workers | json}}
     </ul>
 
 
-    <button (click)="showAlert()"> show alert </button>
+    <button (click)="showAlert()"> show alert</button>
 
 
     <input type="text"

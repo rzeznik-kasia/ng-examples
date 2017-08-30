@@ -47,3 +47,6 @@ ng g s services/workers
 ..
 ng g c components/worker-card
 
+..
+ctrl+alt+l
+ porzadkuje
