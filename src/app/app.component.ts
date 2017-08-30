@@ -25,6 +25,7 @@ export class AppComponent {
     {name: "Kasia", phone: 122234},
   ];
   workers: any[]; /* mozna {}[], mozna {name, phone}, mozna tez tak: Object[], albo jakis interfejs uzyc albo klasy*/
+  /*zmienne w templatkach musza byc publiczne, samo workers jest teraz publiczne, */
 
   /*dependency injecion*/
   constructor(private http: Http) { /*var http = new Http -> daje nam mozliwosc zeby podmienic to w locie*/ /*wstrzyknelismy serwis do pobierania danych*/
@@ -51,5 +52,5 @@ export class AppComponent {
 
   showAlert() {
     alert('hi');
-  }
+  };  /*dobra praktyka jest dodawnaie srednikow, ctrl+shift+enter automatycznie konczy cos tam*/
 }
