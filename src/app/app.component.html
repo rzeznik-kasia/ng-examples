@@ -3,6 +3,13 @@
 
   <div class="card-panel orange lighten-3">  <!--.card-panel.orange-->
     <h3>Directives</h3>
+
+    <input type="text"
+           (input)="myName = $event.target.value"
+
+           [value]="myName"> {{myName}}
+    <br> <!--   two way data binding jest w dwoch etapach(input)->na kazdym znaku zeby cos sie stalo-->
+
     <input type="checkbox"
            id="toggle"
            [(ngModel)]="access"> <!--uwaga na uzywanie dla np 1000 elementwo, moze byc spade wydajnosci--> <!--banan w pudełku, [wejscie (wyjscie -->
