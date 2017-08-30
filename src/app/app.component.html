@@ -5,8 +5,9 @@
     <h3>Directives</h3>
 
     <ul>
-      <li *ngFor="let item of items">
-        {{item | json}}
+      <li [ngClass]="{teal: o}"
+          *ngFor="let item of items; let idx=index; let o = odd">
+        {{idx+1}} {{item.name}} {{o}}
       </li>
     </ul>
 
