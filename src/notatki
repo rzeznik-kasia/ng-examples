@@ -50,3 +50,8 @@ ng g c components/worker-card
 ..
 ctrl+alt+l
  porzadkuje
+
+
+..
+tworzenie dyrektywy
+ng g d directives/set-color
