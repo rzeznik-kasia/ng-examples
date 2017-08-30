@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {WorkersService} from "./services/workers.service";
+import {ItemsService} from "./services/items.service";
 
 @Component({
   selector: 'app-root',
@@ -28,11 +29,16 @@ export class AppComponent {
   ];
   workers: any[];
 
-  constructor(private workerService: WorkersService) {
+  constructor(private workerService: WorkersService, private itemService: ItemsService) {
     workerService
       .getWorkersFromServer()
       .subscribe((data) => {
         this.workers = data;
+      });
+    itemService
+      .getItemsFromServer()
+      .subscribe((data) => {
+        this.items = data;
       });
   }
 

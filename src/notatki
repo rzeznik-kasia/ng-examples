@@ -55,3 +55,9 @@ ctrl+alt+l
 ..
 tworzenie dyrektywy
 ng g d directives/set-color
+
+
+..
+stworzyc serwis
+wstrzyknac
+getitems

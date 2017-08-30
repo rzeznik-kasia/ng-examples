@@ -7,6 +7,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import { WorkerCardComponent } from './components/worker-card/worker-card.component';
 import { SetColorDirective } from './directives/set-color.directive';
+import {ItemsService} from "./services/items.service";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SetColorDirective } from './directives/set-color.directive';
     HttpModule /*tu cale komponenty i z tym dyrektywy serwisy itd*/
   ],
   providers: [
+    ItemsService /*albo tu albo do komponentu*/
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,18 @@
 <div class="contailer">
 
+  <div class="card-panel teal lighten-3">
+    <h3>items
+    </h3>
+
+    <ul>
+      <li *ngFor="let item of items">
+        {{item.title}}
+        <img [src]="item.imgSrc" width="50">
+      </li>
+    </ul>
+  </div>
+
+
   <div class="card-panel yellow">
     <h3>Compmonents</h3>
 
