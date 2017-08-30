@@ -1,7 +1,8 @@
 
 
 
-import {Component} from "@angular/core";          /*dekorator, bajery do klasy*/
+import {Component} from "@angular/core";
+import {Http} from "@angular/http";          /*dekorator, bajery do klasy*/
 
 @Component({          /*alt+enter zeby sie doimportowalo*/
   selector: 'app-root',          /*instancje tworzymy w javie przez new, a w anuglarze poprzez znacznik. np app-root*/
@@ -23,6 +24,11 @@ export class AppComponent {
     {name: "Ola", phone: 123433},
     {name: "Kasia", phone: 122234},
   ];
+
+  /*dependency injecion*/
+  constructor(private http:Http) {
+
+  }
 
   showAlert() {
     alert('hi');
