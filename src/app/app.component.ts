@@ -14,4 +14,5 @@ export class AppComponent {
   /*some changesfdd*/
   today: number = Date.now();
   sum: number[] = [1, 4, 7];
+  access: boolean = true;
 }

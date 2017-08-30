@@ -13,7 +13,7 @@ export class SumPipe implements PipeTransform { /*alt+enter -> dochodzi import*/
   transform(arr: any, ...args): any {
     return arr.reduce((acc, item) => {
       return item + acc;
-    }, 0);
+    }, 0); /*acc na poczatku jest ustawione na 0*/
   }
 
 }

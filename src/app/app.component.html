@@ -1,5 +1,14 @@
 <div class="contailer">
 
+  <!--.card-panel.orange-->
+  <div class="card-panel orange lighten-3">
+    <h3>Directives</h3>
+    <input type="checkbox" id="toggle">
+    <label for="toggle">toggle access</label>
+    <div *ngIf="access">you have access</div>
+  </div>
+
+
   <div class="card-panel teal lighten-3">
     <h3>Pipe and interpolate</h3>
     {{myName | uppercase}} <!--pipy to funkcje na wartosci np. myname-->
@@ -10,6 +19,6 @@
     <br>
     {{today | date:"dd/MMM/yyyy * H:m:s" | uppercase}} <!--po dwukropku formater dajemy--> <!--ctrl+spacja to podpowiadanie-->
     <br>
-    {{sum | sum}}
+    {{sum | sum}} <!--refaktor jesli dotyczy i klas i htmla to jest to ryzykowne, lepiej tego nie robic-->
   </div>
 </div>
