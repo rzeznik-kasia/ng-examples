@@ -1,4 +1,7 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {
+  AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges,
+  ViewChild
+} from '@angular/core';
 
 
 @Component({
@@ -6,13 +9,20 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
   templateUrl: './worker-card.component.html',
   styleUrls: ['./worker-card.component.css']
 })
-export class WorkerCardComponent implements OnInit, OnChanges {
+export class WorkerCardComponent implements OnInit, OnChanges, AfterViewInit {
+
+
+  ngAfterViewInit(): void {/* ctrl i wygenerowalo to*/
+    console.log(this.btnShowPhone);
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
   }
 
   @Input() model;
   @Output() callEvent: EventEmitter<number> = new EventEmitter;
+  @ViewChild('btn') btnShowPhone;
 
   callToPhone;
   constructor() {
